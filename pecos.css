@@ -5,12 +5,14 @@
 .sheet-main_grid{
   display: grid;
   grid-template-columns: repeat(5,160px);
-  grid-template-rows:  35px 35px 35px;
+  grid-template-rows:  35px;
   grid-gap: 5px;
   grid-template-areas: 
     "name name age logo logo"
     "heritage heritage weight logo logo"
-    "handedness handedness height logo logo";
+    "handedness handedness height logo logo"
+    ". . prog . ."
+    "rank kills rounds rounds rounds";
 }
 
 .sheet-main_grid div {
@@ -82,4 +84,26 @@
     grid-area: logo;
     font-weight: bold;
     text-align: center;
+}
+
+.sheet-progression_grid {
+    grid-area: prog;
+    font-weight: bold;
+    text-align: left;
+}
+
+.sheet-rank_grid {
+    grid-area: rank;
+    font-weight: bold;
+    text-align: left;
+}
+.sheet-kills_grid {
+    grid-area: kills;
+    font-weight: bold;
+    text-align: left;
+}
+.sheet-rounds_grid {
+    grid-area: rounds;
+    font-weight: bold;
+    text-align: left;
 }
