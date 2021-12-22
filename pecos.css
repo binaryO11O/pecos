@@ -1,0 +1,85 @@
+.charsheet{
+    background: white;
+}
+
+.sheet-main_grid{
+  display: grid;
+  grid-template-columns: repeat(5,160px);
+  grid-template-rows:  35px 35px 35px;
+  grid-gap: 5px;
+  grid-template-areas: 
+    "name name age logo logo"
+    "heritage heritage weight logo logo"
+    "handedness handedness height logo logo";
+}
+
+.sheet-main_grid div {
+  justify-content: center;
+  padding-top: 2px;
+  border: 3px solid black;
+}
+
+.sheet-main_grid input {
+  border: none;
+}
+
+.sheet-name_grid {
+    grid-area: name;
+    font-weight: bold;
+    text-align: left;
+}
+.sheet-name_grid input {
+  width:100px;
+}
+
+.sheet-age_grid {
+    grid-area: age;
+    font-weight: bold;
+    text-align: left;
+}
+.sheet-age_grid input {
+  width:30px;
+}
+
+
+.sheet-heritage_grid {
+    grid-area: heritage;
+    font-weight: bold;
+    text-align: left;
+}
+.sheet-heritage_grid input {
+  width:100px;
+}
+
+.sheet-weight_grid {
+    grid-area: weight;
+    font-weight: bold;
+    text-align: left;
+}
+.sheet-weight_grid input {
+  width:30px;
+}
+
+.sheet-handedness_grid {
+    grid-area: handedness;
+    font-weight: bold;
+    text-align: left;
+}
+.sheet-handedness_grid input {
+  width:60px;
+}
+
+.sheet-height_grid {
+    grid-area: height;
+    font-weight: bold;
+    text-align: left;
+}
+.sheet-height_grid input {
+  width:30px;
+}
+
+.sheet-logo_grid {
+    grid-area: logo;
+    font-weight: bold;
+    text-align: center;
+}
