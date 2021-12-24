@@ -12,7 +12,18 @@
     "heritage heritage weight logo logo"
     "handedness handedness height logo logo"
     ". . prog . ."
-    "rank kills rounds rounds rounds";
+    "rank kills rounds rounds rounds"
+    "traits traits adv adv adv"
+    "agi agiscr . . ."
+    "awe awescr . . ."
+    "con conscr . . ."
+    "coo cooscr . . ."
+    "int intscr . . ."
+    "luc lucscr . . ."
+    "str strscr . . ."
+    "hth hthscr . . ."
+    "toh tohscr . . ."
+    "cnd cndscr . . .";
 }
 
 .sheet-main_grid div {
@@ -97,13 +108,172 @@
     font-weight: bold;
     text-align: left;
 }
+.sheet-rank_grid input {
+  width:90px;
+}
+
 .sheet-kills_grid {
     grid-area: kills;
     font-weight: bold;
     text-align: left;
 }
+.sheet-kills_grid input {
+  width:30px;
+}
+
 .sheet-rounds_grid {
     grid-area: rounds;
     font-weight: bold;
     text-align: left;
+}
+
+.sheet-traits_grid {
+    grid-area: traits;
+    font-weight: bold;
+    text-align: center;
+}
+.sheet-advant_grid {
+    grid-area: adv;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sheet-agi_grid {
+    grid-area: agi;
+    font-weight: bold;
+    text-align: center;
+}
+.sheet-agiscr_grid {
+    grid-area: agiscr;
+    font-weight: bold;
+    text-align: left;
+}
+.sheet-agiscr_grid input {
+  width:30px;
+}
+
+.sheet-awe_grid {
+    grid-area: awe;
+    font-weight: bold;
+    text-align: center;
+}
+.sheet-awescr_grid {
+    grid-area: awescr;
+    font-weight: bold;
+    text-align: left;
+}
+.sheet-awescr_grid input {
+  width:30px;
+}
+
+.sheet-coo_grid {
+    grid-area: coo;
+    font-weight: bold;
+    text-align: center;
+}
+.sheet-cooscr_grid {
+    grid-area: cooscr;
+    font-weight: bold;
+    text-align: left;
+}
+.sheet-cooscr_grid input {
+  width:30px;
+}
+
+.sheet-con_grid {
+    grid-area: con;
+    font-weight: bold;
+    text-align: center;
+}
+.sheet-conscr_grid {
+    grid-area: conscr;
+    font-weight: bold;
+    text-align: left;
+}
+.sheet-conscr_grid input {
+  width:30px;
+}
+
+.sheet-int_grid {
+    grid-area: int;
+    font-weight: bold;
+    text-align: center;
+}
+.sheet-intscr_grid {
+    grid-area: intscr;
+    font-weight: bold;
+    text-align: left;
+}
+.sheet-intscr_grid input {
+  width:30px;
+}
+
+.sheet-luc_grid {
+    grid-area: luc;
+    font-weight: bold;
+    text-align: center;
+}
+.sheet-lucscr_grid {
+    grid-area: lucscr;
+    font-weight: bold;
+    text-align: left;
+}
+.sheet-lucscr_grid input {
+  width:30px;
+}
+
+.sheet-str_grid {
+    grid-area: str;
+    font-weight: bold;
+    text-align: center;
+}
+.sheet-strscr_grid {
+    grid-area: strscr;
+    font-weight: bold;
+    text-align: left;
+}
+.sheet-strscr_grid input {
+  width:30px;
+}
+
+.sheet-hth_grid {
+    grid-area: hth;
+    font-weight: bold;
+    text-align: center;
+}
+.sheet-hthscr_grid {
+    grid-area: hthscr;
+    font-weight: bold;
+    text-align: left;
+}
+.sheet-hthscr_grid input {
+  width:30px;
+}
+
+.sheet-toh_grid {
+    grid-area: toh;
+    font-weight: bold;
+    text-align: center;
+}
+.sheet-tohscr_grid {
+    grid-area: tohscr;
+    font-weight: bold;
+    text-align: left;
+}
+.sheet-tohscr_grid input {
+  width:30px;
+}
+
+.sheet-cnd_grid {
+    grid-area: cnd;
+    font-weight: bold;
+    text-align: center;
+}
+.sheet-cndscr_grid {
+    grid-area: cndscr;
+    font-weight: bold;
+    text-align: left;
+}
+.sheet-cndscr_grid input {
+  width:80px;
 }
