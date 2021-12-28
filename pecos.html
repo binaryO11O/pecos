@@ -24,10 +24,6 @@
         <span>West of the Pecos<br><img src="https://image.shutterstock.com/image-vector/emblem-template-crossed-revolvers-design-260nw-1054598708.jpg" height="70" width="70"></span>
     </div>
     
-    <div class="sheet-progression_grid" style="border:none; text-align: center">
-        <span>Progression</span>
-    </div>
-
     <div class="sheet-rank_grid" style="text-align: center">
         <span>Rank: <input type="text" name="attr_character_rank" value="Nobody"/></span>
     </div>
@@ -45,7 +41,7 @@
     
     <div class="sheet-traits_grid">Personal Traits</div>
     <div class="sheet-advant_grid">Advantages & Disadvantages</div>
-    
+    <div class="sheet-weap_grid">Weapons</div>
 
     <div class="sheet-agi_grid">Agility</div>
     <div class="sheet-agiscr_grid"><input type="text" name="attr_character_agility" value="5"/></div>
@@ -68,12 +64,12 @@
     <div class="sheet-str_grid">Strength</div>
     <div class="sheet-strscr_grid"><input type="text" name="attr_character_strength" value="9"/></div>
             
-    <div class="sheet-hth_grid">HTH</div>
-    <div class="sheet-hthscr_grid"><input type="text" name="attr_character_hth" value="14"/></div>
-             
-    <div class="sheet-toh_grid">To Hit</div>
-    <div class="sheet-tohscr_grid"><input type="text" name="attr_character_tohit" value="-1"/></div>
+    <div class="sheet-hth_grid">HTH: <span name="attr_character_hth"></span>/<span name="attr_character_hth_max"></span></div>     
+    <div class="sheet-tohit_grid">To Hit: <span name="attr_character_tohit"></span></div>
     
     <div class="sheet-cnd_grid">Condition</div>
     <div class="sheet-cndscr_grid"><input type="text" name="attr_character_cond" value="Fit"/></div>
+    
 </div>
+<input type="hidden" name="attr_character_hth" value="14">
+<input type="hidden" name="attr_character_tohit" value="-1">

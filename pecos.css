@@ -11,9 +11,8 @@
     "name name age logo logo"
     "heritage heritage weight logo logo"
     "handedness handedness height logo logo"
-    ". . prog . ."
     "rank kills rounds rounds rounds"
-    "traits traits adv adv adv"
+    "traits traits adv adv weap"
     "agi agiscr . . ."
     "awe awescr . . ."
     "con conscr . . ."
@@ -21,9 +20,7 @@
     "int intscr . . ."
     "luc lucscr . . ."
     "str strscr . . ."
-    "hth hthscr . . ."
-    "toh tohscr . . ."
-    "cnd cndscr . . .";
+    "hth tohit cnd cndscr .";
 }
 
 .sheet-main_grid div {
@@ -137,6 +134,11 @@
     font-weight: bold;
     text-align: center;
 }
+.sheet-weap_grid {
+    grid-area: weap;
+    font-weight: bold;
+    text-align: center;
+}
 
 .sheet-agi_grid {
     grid-area: agi;
@@ -241,28 +243,14 @@
     font-weight: bold;
     text-align: center;
 }
-.sheet-hthscr_grid {
-    grid-area: hthscr;
-    font-weight: bold;
-    text-align: left;
-}
-.sheet-hthscr_grid input {
-  width:30px;
-}
 
-.sheet-toh_grid {
-    grid-area: toh;
+
+.sheet-tohit_grid {
+    grid-area: tohit;
     font-weight: bold;
     text-align: center;
 }
-.sheet-tohscr_grid {
-    grid-area: tohscr;
-    font-weight: bold;
-    text-align: left;
-}
-.sheet-tohscr_grid input {
-  width:30px;
-}
+
 
 .sheet-cnd_grid {
     grid-area: cnd;
