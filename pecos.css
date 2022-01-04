@@ -1,267 +1,403 @@
-.charsheet{
-    background: white;
+/*Configure the tab buttons*/
+.charsheet .sheet-character,
+.charsheet .sheet-weapons {
+    display: none;
 }
 
-.sheet-main_grid{
-  display: grid;
-  grid-template-columns: repeat(5,160px);
-  grid-template-rows:  35px;
-  grid-gap: 5px;
-  grid-template-areas: 
-    "name name age logo logo"
-    "heritage heritage weight logo logo"
-    "handedness handedness height logo logo"
-    "rank kills rounds rounds rounds"
-    "traits traits adv adv weap"
-    "agi agiscr . . ."
-    "awe awescr . . ."
-    "con conscr . . ."
-    "coo cooscr . . ."
-    "int intscr . . ."
-    "luc lucscr . . ."
-    "str strscr . . ."
-    "hth tohit cnd cndscr .";
+/* show the selected tab */
+.charsheet .sheet-tabstoggle[value="character"] ~ div.sheet-character,
+.charsheet .sheet-tabstoggle[value="weapons"] ~ div.sheet-weapons {
+    display: block;
 }
 
-.sheet-main_grid div {
-  justify-content: center;
-  padding-top: 2px;
-  border: 3px solid black;
-}
+/* character sheet */
 
-.sheet-main_grid input {
-  border: none;
-}
+    .sheet-main_grid{
+      display: grid;
+      grid-template-columns: repeat(5,160px);
+      grid-template-rows:  35px;
+      grid-gap: 5px;
+      grid-template-areas: 
+        "name name age logo logo"
+        "heritage heritage weight logo logo"
+        "handedness handedness height logo logo"
+        "rank kills rounds rounds rounds"
+        "traits traits adv adv weap"
+        "agi agiscr agimod agimod wp0"
+        "awe awescr awemod awemod wp1"
+        "con conscr conmod conmod wp2"
+        "coo cooscr coomod coomod wp3"
+        "int intscr intmod intmod wp4"
+        "luc lucscr lucmod lucmod wp5"
+        "str strscr strmod strmod wp6"
+        "hth tohit lps cnd ooa";
+    }
 
-.sheet-name_grid {
-    grid-area: name;
-    font-weight: bold;
-    text-align: left;
-}
-.sheet-name_grid input {
-  width:100px;
-}
+    .sheet-main_grid div {
+      justify-content: center;
+      padding-top: 2px;
+      border: 3px solid black;
+    }
 
-.sheet-age_grid {
-    grid-area: age;
-    font-weight: bold;
-    text-align: left;
-}
-.sheet-age_grid input {
-  width:30px;
-}
+    .sheet-main_grid input {
+      border: none;
+    }
 
+    .sheet-name_grid {
+        grid-area: name;
+        font-weight: bold;
+        text-align: left;
+    }
+    .sheet-name_grid input {
+      width:100px;
+    }
 
-.sheet-heritage_grid {
-    grid-area: heritage;
-    font-weight: bold;
-    text-align: left;
-}
-.sheet-heritage_grid input {
-  width:100px;
-}
-
-.sheet-weight_grid {
-    grid-area: weight;
-    font-weight: bold;
-    text-align: left;
-}
-.sheet-weight_grid input {
-  width:30px;
-}
-
-.sheet-handedness_grid {
-    grid-area: handedness;
-    font-weight: bold;
-    text-align: left;
-}
-.sheet-handedness_grid input {
-  width:60px;
-}
-
-.sheet-height_grid {
-    grid-area: height;
-    font-weight: bold;
-    text-align: left;
-}
-.sheet-height_grid input {
-  width:30px;
-}
-
-.sheet-logo_grid {
-    grid-area: logo;
-    font-weight: bold;
-    text-align: center;
-}
-
-.sheet-progression_grid {
-    grid-area: prog;
-    font-weight: bold;
-    text-align: left;
-}
-
-.sheet-rank_grid {
-    grid-area: rank;
-    font-weight: bold;
-    text-align: left;
-}
-.sheet-rank_grid input {
-  width:90px;
-}
-
-.sheet-kills_grid {
-    grid-area: kills;
-    font-weight: bold;
-    text-align: left;
-}
-.sheet-kills_grid input {
-  width:30px;
-}
-
-.sheet-rounds_grid {
-    grid-area: rounds;
-    font-weight: bold;
-    text-align: left;
-}
-
-.sheet-traits_grid {
-    grid-area: traits;
-    font-weight: bold;
-    text-align: center;
-}
-.sheet-advant_grid {
-    grid-area: adv;
-    font-weight: bold;
-    text-align: center;
-}
-.sheet-weap_grid {
-    grid-area: weap;
-    font-weight: bold;
-    text-align: center;
-}
-
-.sheet-agi_grid {
-    grid-area: agi;
-    font-weight: bold;
-    text-align: center;
-}
-.sheet-agiscr_grid {
-    grid-area: agiscr;
-    font-weight: bold;
-    text-align: left;
-}
-.sheet-agiscr_grid input {
-  width:30px;
-}
-
-.sheet-awe_grid {
-    grid-area: awe;
-    font-weight: bold;
-    text-align: center;
-}
-.sheet-awescr_grid {
-    grid-area: awescr;
-    font-weight: bold;
-    text-align: left;
-}
-.sheet-awescr_grid input {
-  width:30px;
-}
-
-.sheet-coo_grid {
-    grid-area: coo;
-    font-weight: bold;
-    text-align: center;
-}
-.sheet-cooscr_grid {
-    grid-area: cooscr;
-    font-weight: bold;
-    text-align: left;
-}
-.sheet-cooscr_grid input {
-  width:30px;
-}
-
-.sheet-con_grid {
-    grid-area: con;
-    font-weight: bold;
-    text-align: center;
-}
-.sheet-conscr_grid {
-    grid-area: conscr;
-    font-weight: bold;
-    text-align: left;
-}
-.sheet-conscr_grid input {
-  width:30px;
-}
-
-.sheet-int_grid {
-    grid-area: int;
-    font-weight: bold;
-    text-align: center;
-}
-.sheet-intscr_grid {
-    grid-area: intscr;
-    font-weight: bold;
-    text-align: left;
-}
-.sheet-intscr_grid input {
-  width:30px;
-}
-
-.sheet-luc_grid {
-    grid-area: luc;
-    font-weight: bold;
-    text-align: center;
-}
-.sheet-lucscr_grid {
-    grid-area: lucscr;
-    font-weight: bold;
-    text-align: left;
-}
-.sheet-lucscr_grid input {
-  width:30px;
-}
-
-.sheet-str_grid {
-    grid-area: str;
-    font-weight: bold;
-    text-align: center;
-}
-.sheet-strscr_grid {
-    grid-area: strscr;
-    font-weight: bold;
-    text-align: left;
-}
-.sheet-strscr_grid input {
-  width:30px;
-}
-
-.sheet-hth_grid {
-    grid-area: hth;
-    font-weight: bold;
-    text-align: center;
-}
+    .sheet-age_grid {
+        grid-area: age;
+        font-weight: bold;
+        text-align: left;
+    }
+    .sheet-age_grid input {
+      width:30px;
+    }
 
 
-.sheet-tohit_grid {
-    grid-area: tohit;
-    font-weight: bold;
-    text-align: center;
-}
+    .sheet-heritage_grid {
+        grid-area: heritage;
+        font-weight: bold;
+        text-align: left;
+    }
+    .sheet-heritage_grid input {
+      width:100px;
+    }
+
+    .sheet-weight_grid {
+        grid-area: weight;
+        font-weight: bold;
+        text-align: left;
+    }
+    .sheet-weight_grid input {
+      width:30px;
+    }
+
+    .sheet-handedness_grid {
+        grid-area: handedness;
+        font-weight: bold;
+        text-align: left;
+    }
+    .sheet-handedness_grid input {
+      width:60px;
+    }
+
+    .sheet-height_grid {
+        grid-area: height;
+        font-weight: bold;
+        text-align: left;
+    }
+    .sheet-height_grid input {
+      width:30px;
+    }
+
+    .sheet-logo_grid {
+        grid-area: logo;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .sheet-progression_grid {
+        grid-area: prog;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .sheet-rank_grid {
+        grid-area: rank;
+        font-weight: bold;
+        text-align: left;
+    }
+    .sheet-rank_grid input {
+      width:90px;
+    }
+
+    .sheet-kills_grid {
+        grid-area: kills;
+        font-weight: bold;
+        text-align: left;
+    }
+    .sheet-kills_grid input {
+      width:30px;
+    }
+
+    .sheet-rounds_grid {
+        grid-area: rounds;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .sheet-traits_grid {
+        grid-area: traits;
+        font-weight: bold;
+        text-align: center;
+    }
+    .sheet-advant_grid {
+        grid-area: adv;
+        font-weight: bold;
+        text-align: center;
+    }
+    .sheet-weap_grid {
+        grid-area: weap;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .sheet-agi_grid {
+        grid-area: agi;
+        font-weight: bold;
+        text-align: center;
+    }
+    .sheet-agiscr_grid {
+        grid-area: agiscr;
+        font-weight: bold;
+        text-align: left;
+    }
+    .sheet-agiscr_grid input {
+      width:30px;
+    }
+    .sheet-agimod_grid {
+        grid-area: agimod;
+        font-weight: normal;
+        text-align: left;
+        padding-left: 20px;
+    }
+    .sheet-agimod_grid input {
+      width:30px;
+    }
+
+    .sheet-awe_grid {
+        grid-area: awe;
+        font-weight: bold;
+        text-align: center;
+    }
+    .sheet-awescr_grid {
+        grid-area: awescr;
+        font-weight: bold;
+        text-align: left;
+    }
+    .sheet-awescr_grid input {
+      width:30px;
+    }
+    .sheet-awemod_grid {
+        grid-area: awemod;
+        font-weight: normal;
+        text-align: left;
+        padding-left: 20px;
+    }
+    .sheet-awemod_grid input {
+      width:30px;
+    }
+
+    .sheet-coo_grid {
+        grid-area: coo;
+        font-weight: bold;
+        text-align: center;
+    }
+    .sheet-cooscr_grid {
+        grid-area: cooscr;
+        font-weight: bold;
+        text-align: left;
+    }
+    .sheet-cooscr_grid input {
+      width:30px;
+    }
+    .sheet-coomod_grid {
+        grid-area: coomod;
+        font-weight: normal;
+        text-align: left;
+        padding-left: 20px;
+    }
+    .sheet-coomod_grid input {
+      width:30px;
+    }
+
+    .sheet-con_grid {
+        grid-area: con;
+        font-weight: bold;
+        text-align: center;
+    }
+    .sheet-conscr_grid {
+        grid-area: conscr;
+        font-weight: bold;
+        text-align: left;
+    }
+    .sheet-conscr_grid input {
+      width:30px;
+    }
+    .sheet-conmod_grid {
+        grid-area: conmod;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    .sheet-int_grid {
+        grid-area: int;
+        font-weight: bold;
+        text-align: center;
+    }
+    .sheet-intscr_grid {
+        grid-area: intscr;
+        font-weight: bold;
+        text-align: left;
+    }
+    .sheet-intscr_grid input {
+      width:30px;
+    }
+    .sheet-intmod_grid {
+        grid-area: intmod;
+        font-weight: normal;
+        text-align: left;
+        padding-left: 20px;
+    }
+    .sheet-intmod_grid input {
+      width:30px;
+    }
+
+    .sheet-luc_grid {
+        grid-area: luc;
+        font-weight: bold;
+        text-align: center;
+    }
+    .sheet-lucscr_grid {
+        grid-area: lucscr;
+        font-weight: bold;
+        text-align: left;
+    }
+    .sheet-lucscr_grid input {
+      width:30px;
+    }
+    .sheet-lucmod_grid {
+        grid-area: lucmod;
+        font-weight: normal;
+        text-align: left;
+        padding-left: 20px;
+    }
+    .sheet-lucmod_grid input {
+      width:30px;
+    }
+
+    .sheet-str_grid {
+        grid-area: str;
+        font-weight: bold;
+        text-align: center;
+    }
+    .sheet-strscr_grid {
+        grid-area: strscr;
+        font-weight: bold;
+        text-align: left;
+    }
+    .sheet-strscr_grid input {
+      width:30px;
+    }
+    .sheet-strmod_grid {
+        grid-area: strmod;
+        font-weight: normal;
+        text-align: left;
+        padding-left: 20px;
+    }
+    .sheet-strmod_grid input {
+      width:30px;
+    }
 
 
-.sheet-cnd_grid {
-    grid-area: cnd;
-    font-weight: bold;
-    text-align: center;
-}
-.sheet-cndscr_grid {
-    grid-area: cndscr;
-    font-weight: bold;
-    text-align: left;
-}
-.sheet-cndscr_grid input {
-  width:80px;
-}
+    .sheet-hth_grid {
+        grid-area: hth;
+        font-weight: bold;
+        text-align: center;
+    }
+
+
+    .sheet-tohit_grid {
+        grid-area: tohit;
+        font-weight: bold;
+        text-align: center;
+    }
+
+
+    .sheet-lps_grid {
+        grid-area: lps;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .sheet-cnd_grid {
+        grid-area: cnd;
+        font-weight: bold;
+        text-align: left;
+    }
+    .sheet-cnd_grid input {
+      width:80px;
+    }
+
+    .sheet-wp0_grid {
+        grid-area: wp0;
+    }
+    .sheet-wp1_grid {
+        grid-area: wp1;
+    }
+    .sheet-wp2_grid {
+        grid-area: wp2;
+    }
+    .sheet-wp3_grid {
+        grid-area: wp3;
+    }
+    .sheet-wp4_grid {
+        grid-area: wp4;
+    }
+    .sheet-wp5_grid {
+        grid-area: wp5;
+    }
+    .sheet-wp6_grid {
+        grid-area: wp6;
+    }
+
+
+
+/* weapons sheet */
+
+    .sheet-weapons_grid{
+      display: grid;
+      grid-template-columns: 1fr 2fr 2fr 3fr 1fr 2fr 2fr 2fr 2fr;
+      grid-template-rows:  auto;
+    }
+    .sheet-weapons_grid div {
+      text-align: center;
+      border: 1px solid black;
+    }
+
+/* various helpers */
+    /* checkbox */
+        /* Configure a container for the toggle */
+        .charsheet .sheet-toggle-container {
+          display: inline-flex;
+          align-items: center;
+        }
+
+        /* Configure the button styling. This example makes it look like a checkbox. */
+        .charsheet button.sheet-toggle {
+          padding: 0;
+          border: solid 1px #a8a8a8;
+          cursor: pointer;
+
+          width: 16px;
+          height: 16px;
+          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          font-size: 12px;
+        }
+
+        /* Hide the "checked" section of the toggle if the attribute value is not "1". */
+        .charsheet input.sheet-toggle:not([value="1"]) ~ button.sheet-toggle > span.sheet-checked {
+          display: none;
+        }

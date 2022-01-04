@@ -1,75 +1,341 @@
-<link rel="stylesheet" href="pecos.css">
-<div class="sheet-main_grid">
-    <div class="sheet-age_grid" >
-        <span>Age:&nbsp;<input type="text" name="attr_character_age" value="20"/></span>
-    </div>
-    <div class="sheet-name_grid">
-        <span>Name:&nbsp;<input type="text" name="attr_character_name"/></span>
-    </div>
-    
-    <div class="sheet-heritage_grid">
-        <span>Heritage:&nbsp;<input type="text" name="attr_character_heritage" value="Mixed"/></span>
-    </div>
-    <div class="sheet-weight_grid">
-        <span>Weight:&nbsp;<input type="text" name="attr_character_weight" value="165"/></span>
-    </div>
-    <div class="sheet-handedness_grid">
-        <span>Handedness:&nbsp;<input type="text" name="attr_character_handedness" value="Left"/></span>
-    </div>
-    <div class="sheet-height_grid">
-        <span>Height:&nbsp;<input type="text" name="attr_character_height" value="5'9"/></span>
-    </div>
-
-    <div class="sheet-logo_grid">
-        <span>West of the Pecos<br><img src="https://image.shutterstock.com/image-vector/emblem-template-crossed-revolvers-design-260nw-1054598708.jpg" height="70" width="70"></span>
-    </div>
-    
-    <div class="sheet-rank_grid" style="text-align: center">
-        <span>Rank: <input type="text" name="attr_character_rank" value="Nobody"/></span>
-    </div>
-    <div class="sheet-kills_grid" style="text-align: center">
-        <span>Kills: <input type="text" name="attr_character_kills" value="0"/></span>
-    </div>
-    <div class="sheet-rounds_grid">
-        <img style="width:7px;height:31px;" src="https://github.com/binaryO11O/pecos/blob/main/bullet.png?raw=true">
-        <img style="width:7px;height:31px;" src="https://github.com/binaryO11O/pecos/blob/main/bullet.png?raw=true">
-        <img style="width:7px;height:31px;" src="https://github.com/binaryO11O/pecos/blob/main/bullet.png?raw=true">
-        <img style="width:7px;height:31px;" src="https://github.com/binaryO11O/pecos/blob/main/bullet.png?raw=true">
-        <img style="width:7px;height:31px;" src="https://github.com/binaryO11O/pecos/blob/main/bullet.png?raw=true">
-        <img style="width:7px;height:31px;" src="https://github.com/binaryO11O/pecos/blob/main/bullet.png?raw=true">
-    </div>    
-    
-    <div class="sheet-traits_grid">Personal Traits</div>
-    <div class="sheet-advant_grid">Advantages & Disadvantages</div>
-    <div class="sheet-weap_grid">Weapons</div>
-
-    <div class="sheet-agi_grid">Agility</div>
-    <div class="sheet-agiscr_grid"><input type="text" name="attr_character_agility" value="5"/></div>
-
-    <div class="sheet-awe_grid">Awareness</div>
-    <div class="sheet-awescr_grid"><input type="text" name="attr_character_awareness" value="4"/></div>
-
-    <div class="sheet-con_grid">Constitution</div>
-    <div class="sheet-conscr_grid"><input type="text" name="attr_character_constitution" value="8"/></div>
-    
-    <div class="sheet-coo_grid">Coordination</div>
-    <div class="sheet-cooscr_grid"><input type="text" name="attr_character_coordination" value="6"/></div>
-    
-    <div class="sheet-int_grid">Intelligence</div>
-    <div class="sheet-intscr_grid"><input type="text" name="attr_character_intelligence" value="4"/></div>
-    
-    <div class="sheet-luc_grid">Luck</div>
-    <div class="sheet-lucscr_grid"><input type="text" name="attr_character_luck" value="1"/></div>
-        
-    <div class="sheet-str_grid">Strength</div>
-    <div class="sheet-strscr_grid"><input type="text" name="attr_character_strength" value="9"/></div>
-            
-    <div class="sheet-hth_grid">HTH: <span name="attr_character_hth"></span>/<span name="attr_character_hth_max"></span></div>     
-    <div class="sheet-tohit_grid">To Hit: <span name="attr_character_tohit"></span></div>
-    
-    <div class="sheet-cnd_grid">Condition</div>
-    <div class="sheet-cndscr_grid"><input type="text" name="attr_character_cond" value="Fit"/></div>
-    
+<input type="hidden" class="sheet-tabstoggle" name="attr_sheetTab"  value="character"  />
+<div>
+    <button type="action" name="act_character" >Character</button>
+    <button type="action" name="act_Weapons" >Weapons</button>
+    <br><br>
 </div>
-<input type="hidden" name="attr_character_hth" value="14">
-<input type="hidden" name="attr_character_tohit" value="-1">
+
+<div class="sheet-character">
+    <div class="sheet-main_grid">
+        <div class="sheet-age_grid" >
+            <span>Age:&nbsp;<input type="text" name="attr_character_age" value="20"/></span>
+        </div>
+        <div class="sheet-name_grid">
+            <span>Name:&nbsp;<input type="text" name="attr_character_name"/></span>
+        </div>
+
+        <div class="sheet-heritage_grid">
+            <span>Heritage:&nbsp;<input type="text" name="attr_character_heritage" value="Mixed"/></span>
+        </div>
+        <div class="sheet-weight_grid">
+            <span>Weight:&nbsp;<input type="text" name="attr_character_weight" value="165"/></span>
+        </div>
+        <div class="sheet-handedness_grid">
+            <span>Handedness:&nbsp;<input type="text" name="attr_character_handedness" value="Left"/></span>
+        </div>
+        <div class="sheet-height_grid">
+            <span>Height:&nbsp;<input type="text" name="attr_character_height" value="5'9"/></span>
+        </div>
+
+        <div class="sheet-logo_grid">
+            <span>West of the Pecos<br><img src="https://image.shutterstock.com/image-vector/emblem-template-crossed-revolvers-design-260nw-1054598708.jpg" height="70" width="70"></span>
+        </div>
+
+        <div class="sheet-rank_grid" style="text-align: center">
+            <span>Rank: <input type="text" name="attr_character_rank" value="Nobody"/></span>
+        </div>
+        <div class="sheet-kills_grid" style="text-align: center">
+            <span>Kills: <input type="text" name="attr_character_kills" value="0"/></span>
+        </div>
+        <div class="sheet-rounds_grid">
+            <img style="width:7px;height:31px;" src="https://github.com/binaryO11O/pecos/blob/main/bullet.png?raw=true">
+            <img style="width:7px;height:31px;" src="https://github.com/binaryO11O/pecos/blob/main/bullet.png?raw=true">
+            <img style="width:7px;height:31px;" src="https://github.com/binaryO11O/pecos/blob/main/bullet.png?raw=true">
+            <img style="width:7px;height:31px;" src="https://github.com/binaryO11O/pecos/blob/main/bullet.png?raw=true">
+            <img style="width:7px;height:31px;" src="https://github.com/binaryO11O/pecos/blob/main/bullet.png?raw=true">
+            <img style="width:7px;height:31px;" src="https://github.com/binaryO11O/pecos/blob/main/bullet.png?raw=true">
+        </div>    
+
+        <div class="sheet-traits_grid">Personal Traits</div>
+        <div class="sheet-advant_grid">Advantages & Disadvantages</div>
+        <div class="sheet-weap_grid">Weapons</div>
+
+        <div class="sheet-agi_grid">Agility</div>
+        <div class="sheet-agiscr_grid"><input type="text" name="attr_character_agility" value="5"/><span name="attr_character_agility_desc" style="font-weight: normal;"></span></div>
+        <div class="sheet-agimod_grid">HTH Modifier: <span name="attr_character_agimod"></span><input type="hidden" name="attr_character_agimod" value="0"/></div>
+
+        <div class="sheet-awe_grid">Awareness</div>
+        <div class="sheet-awescr_grid"><input type="text" name="attr_character_awareness" value="5"/><span name="attr_character_awareness_desc" style="font-weight: normal;"></span></div>
+        <div class="sheet-awemod_grid">AWA skill rolls: <span name="attr_character_awemod"/><input type="hidden" name="attr_character_awemod" value="0"/></div>
+
+        <div class="sheet-con_grid">Constitution</div>
+        <div class="sheet-conscr_grid"><input type="text" name="attr_character_constitution" value="5"/><span name="attr_character_constitution_desc" style="font-weight: normal;"></div>
+        <div class="sheet-conmod_grid">CON plus 16 = total LPs</div>
+            
+        <div class="sheet-coo_grid">Coordination</div>
+        <div class="sheet-cooscr_grid"><input type="text" name="attr_character_coordination" value="5"/><span name="attr_character_coordination_desc" style="font-weight: normal;"></div>
+        <div class="sheet-coomod_grid">To Hit modifier: <span name="attr_character_coomod"/><input type="hidden" name="attr_character_coomod" value="0"/></div>
+            
+        <div class="sheet-int_grid">Intelligence</div>
+        <div class="sheet-intscr_grid"><input type="text" name="attr_character_intelligence" value="5"/><span name="attr_character_intelligence_desc" style="font-weight: normal;"></div>
+        <div class="sheet-intmod_grid">Extra skill points: <span name="attr_character_intmod"/><input type="hidden" name="attr_character_intmod" value="nil"/></div>
+
+        <div class="sheet-luc_grid">Luck</div>
+        <div class="sheet-lucscr_grid"><input type="text" name="attr_character_luck" value="5"/><span name="attr_character_luck_desc" style="font-weight: normal;"></div>
+        <div class="sheet-lucmod_grid">LUCK skill rolls: <span name="attr_character_lucmod"/><input type="hidden" name="attr_character_lucmod" value="0"/></div>
+
+        <div class="sheet-str_grid">Strength</div>
+        <div class="sheet-strscr_grid"><input type="text" name="attr_character_strength" value="5"/><span name="attr_character_strength_desc" style="font-weight: normal;"></div>
+        <div class="sheet-strmod_grid">Damage: <span name="attr_character_strmod"/><input type="hidden" name="attr_character_strmod" value="0"/></div>
+
+        <div class="sheet-hth_grid">Base HTH: <span name="attr_character_hth"></span></div>     
+        <div class="sheet-tohit_grid">To Hit: <span name="attr_character_tohit"></span></div>
+
+        <div class="sheet-lps_grid">LPs: <span name="attr_character_lp"></span>/<span name="attr_character_lp_max"></span></div>
+            
+        <div class="sheet-cnd_grid"><input type="text" name="attr_character_cond" value="Fit"/></div>
+
+        <div class="sheet-wp0_grid"><span name="attr_wp0_name"></span></div>
+        <div class="sheet-wp1_grid"><span name="attr_wp1_name"></span></div>
+        <div class="sheet-wp2_grid"><span name="attr_wp2_name"></span></div>
+        <div class="sheet-wp3_grid"><span name="attr_wp3_name"></span></div>
+        <div class="sheet-wp4_grid"><span name="attr_wp4_name"></span></div>
+        <div class="sheet-wp5_grid"><span name="attr_wp5_name"></span></div>
+        <div class="sheet-wp6_grid"><span name="attr_wp6_name"></span></div>
+        
+    </div>
+    <input type="hidden" name="attr_character_lp" value="-1">
+</div>
+
+<div class="sheet-weapons">
+    <h2>Weapons</h2>
+    <span name="attr_test"></span>
+    <div class="sheet-weapons_grid">
+        <div>Select</div>
+        <div>Brand</div>
+        <div>Model</div>
+        <div>Action & Ammo</div>
+        <div>Shots</div>
+        <div>Capacity</div>
+        <div>Reload</div>
+        <div>Damage</div>
+        <div>Range</div>
+        
+        <div>
+            <div class="sheet-toggle-container">
+                <input type="hidden" class="sheet-toggle" name="attr_wp0_flag" />
+                <button type="action" name="act_wp0" class="sheet-toggle">
+                    <span class="sheet-checked">✓</span>
+                </button>
+            
+            </div>
+        </div>
+        <div>COLT</div>
+        <div>.44 Frontier</div>
+        <div>Single, Cap n ball</div>
+        <div>2</div>
+        <div>6</div>
+        <div>6</div>
+        <div>1d8</div>
+        <div>SHORT</div>
+        
+        <div>
+            <div class="sheet-toggle-container">
+                <input type="hidden" class="sheet-toggle" name="attr_wp1_flag" />
+                <button type="action" name="act_wp1" class="sheet-toggle">
+                    <span class="sheet-checked">✓</span>
+                </button>
+            
+            </div>
+        </div>
+        <div>COLT</div>
+        <div>.45 Peacemaker</div>
+        <div>Single, Cartridge</div>
+        <div>2</div>
+        <div>6</div>
+        <div>3</div>
+        <div>1d8+1</div>
+        <div>MEDIUM</div>
+
+        <div>
+            <div class="sheet-toggle-container">
+                <input type="hidden" class="sheet-toggle" name="attr_wp2_flag" />
+                <button type="action" name="act_wp2" class="sheet-toggle">
+                    <span class="sheet-checked">✓</span>
+                </button>
+            
+            </div>
+        </div>
+        <div>S & Wesson</div>
+        <div>.44 American</div>
+        <div>Single, Cartridge</div>
+        <div>2</div>
+        <div>6</div>
+        <div>3</div>
+        <div>1d8</div>
+        <div>SHORT</div>
+    </div>
+</div>
+
+
+<script type="text/worker">
+    on('sheet:opened',function(){
+        setAttrs({sheetTab: "character"});
+        desc_traits();
+    });
+
+// tab buttons
+    const buttonlist = ["character","weapons"];
+    buttonlist.forEach(button => {
+        on(`clicked:${button}`, function() {
+            setAttrs({
+                sheetTab: button
+            });
+        });
+    });
+
+// weapons selectors
+  const wptoggleList=[];
+  const wpflagList=[];
+  const weaponscount = 3;
+  const weapinvcount = 7;
+  
+  for (let i = 0; i < weaponscount; i++) {
+    wptoggleList[i] = "wp"+i;
+    wpflagList[i] = wptoggleList[i] + "_flag";
+  }
+  
+  wptoggleList.forEach(function(button) {
+    on(`clicked:${button}`, function() {
+      const flag = `${button}_flag`;
+      // Check the current value of the hidden flag.
+      getAttrs([flag], function(v) {
+        // Update the value of the hidden flag to "1" for checked or "0" for unchecked.
+        setAttrs({[flag]: v[flag] !== "1" ? "1" : "0"}, function() {
+            pop_weapons();
+        }
+        );
+      });
+      
+    });
+  });
+
+// weapons list
+    const weaponsAttr=["wp0_name","wp1_name","wp2_name","wp3_name","wp4_name","wp5_name","wp6_name"];
+    const weaponsVal=["","","","","","",""];
+    const weaponsName=[".44 Frontier",".45 Peacemaker",".44 American"]
+// populate weapons
+  function pop_weapons() {
+    let wpinv = 0;
+    getAttrs(wpflagList, function(v) {
+        //setAttrs({test:v.wp1_flag});
+        //setAttrs({test:v["wp1_flag"]});
+        for (let i = 0; i < weaponscount; i++) {
+           if (v["wp"+i+"_flag"]==1) {
+            setAttrs({[weaponsAttr[wpinv]]:weaponsName[i]});
+            wpinv += 1;
+           }
+        }
+        for (i=wpinv; i<weapinvcount; i++) {
+             setAttrs({[weaponsAttr[i]]:" "});
+        }
+        
+    });
+    
+  }
+  
+    on("change:character_agility change:character_awareness change:character_constitution change:character_coordination change:character_intelligence change:character_luck change:character_strength", function() {
+        desc_traits();
+    });
+    
+    const traitAttrs=["character_agility", "character_awareness", "character_constitution", "character_coordination", "character_intelligence", "character_luck", "character_strength"];
+
+    const traitDescs=[{low:"Sluggish", high:"Agile"},{low:"Vague", high:"Alert"},{low:"Frail", high:"Tough"},{low:"Clumsy", high:"Synchronised"},{low:"Halfwit", high:"Brilliant"},{low:"Luckless", high:"Blessed"},{low:"Weak", high:"Powerful"}];
+    
+    function desc_traits() {
+        let tval = 0;
+        getAttrs(traitAttrs, function(v) {
+            for (let i = 0; i < traitAttrs.length; i++) {
+                tval = v[traitAttrs[i]];
+                if (tval < 4)
+                    setAttrs({[traitAttrs[i]+"_desc"]:traitDescs[i]["low"]});
+                else if (tval < 8)
+                    setAttrs({[traitAttrs[i]+"_desc"]:"Average"});
+                else
+                    setAttrs({[traitAttrs[i]+"_desc"]:traitDescs[i]["high"]});
+                    
+                if (traitAttrs[i]=="character_agility") {
+                    let basehth = 12;
+                    switch(tval) {
+                        case "1":
+                            setAttrs({character_agimod:"-3"}, {silent: true});
+                            basehth -= 3;
+                            break;
+                        case "2":
+                            setAttrs({character_agimod:"-2"}, {silent: true});
+                            basehth -= 2;
+                            break;
+                        case "3":
+                            setAttrs({character_agimod:"-1"}, {silent: true});
+                            basehth -= 1;
+                            break;
+                        case "8":
+                            setAttrs({character_agimod:"+1"}, {silent: true});
+                            basehth += 1;
+                            break;
+                        case "9":
+                            setAttrs({character_agimod:"+2"}, {silent: true});
+                            basehth += 2;
+                            break;
+                        case "10":
+                            setAttrs({character_agimod:"+3"}, {silent: true});
+                            basehth += 3;
+                            break;
+                        default:
+                            setAttrs({character_agimod:"nil"}, {silent: true});
+                            break;
+                    }
+                    setAttrs({character_hth:basehth});
+                }
+                else if (traitAttrs[i]=="character_awareness") {
+                    if (tval < 7)
+                        setAttrs({character_awemod:"-1"}, {silent: true});
+                    else
+                        setAttrs({character_awemod:"nil"}, {silent: true});
+                }
+                else if (traitAttrs[i]=="character_constitution") {
+                    let maxlp = 16 + parseInt(tval) || 0;
+                    setAttrs({character_lp_max:maxlp}, {silent: true});
+                    getAttrs(["character_lp"], function(v) {
+                        if (v["character_lp"] == "-1")
+                            setAttrs({character_lp:maxlp}, {silent: true});
+                    });
+                }
+                else if (traitAttrs[i]=="character_coordination") {
+                    let basetoh = "0";
+                    switch(tval) {
+                        case "1":
+                            basetoh = "-3";
+                            break;
+                        case "2":
+                            basetoh = "-2";
+                            break;
+                        case "3":
+                            basetoh = "-1";
+                            break;
+                        case "8":
+                            basetoh = "+1";
+                            break;
+                        case "9":
+                            basetoh = "+1";
+                            break;
+                        case "10":
+                            basetoh = "+1";
+                            break;
+
+                    }
+                    setAttrs({character_coomod:basetoh}, {silent: true});
+                    setAttrs({character_tohit:basetoh});
+                }
+                else if (traitAttrs[i]=="character_luck") {
+                    if (tval < 7)
+                        setAttrs({character_lucmod:"-1"}, {silent: true});
+                    else
+                        setAttrs({character_lucmod:"nil"}, {silent: true});
+                }
+            }
+            
+        })
+    }
+</script>
+
