@@ -360,6 +360,14 @@
     }
 
 
+    .sheet-wp_ctl_grid{
+      display: grid;
+      grid-template-columns: 80% 20%;
+    }
+    .sheet-wp_ctl_grid div {
+      border: none;
+    }
+
 
 /* weapons sheet */
 
@@ -401,3 +409,88 @@
         .charsheet input.sheet-toggle:not([value="1"]) ~ button.sheet-toggle > span.sheet-checked {
           display: none;
         }
+
+
+/* roll buttons */
+
+/*
+.charsheet button[type = "roll"]{
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    background-image: none;
+    text-shadow: none;
+    box-shadow: none;
+    padding: 0px !important;
+    margin: 0px !important;
+    width: 100%;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-language-override: normal;
+    font-size: inherit !important;
+    line-height: inherit !important;
+}
+.charsheet button[type = "roll"]:before{
+    content: "" !important;
+}
+.charsheet button[type = "roll"]:hover{
+    color:#b14623;
+}
+.charsheet .sheet-statlabel button[type = "roll"] {
+    font-weight:bold;
+}
+.charsheet .sheet-statlabel button[type = "roll"]:hover {
+    color:#602749;
+}
+*/
+
+
+.sheet-wp div{
+   border: none;
+ }
+
+.sheet-wp-hitroll button[type = "roll"]{
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    background-image: none;
+    text-shadow: none;
+    box-shadow: none;
+    padding: 0px !important;
+    margin: 0px !important;
+    width: 100%;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-language-override: normal;
+    font-size: inherit !important;
+    line-height: inherit !important;
+}
+.sheet-wp-hitroll button[type = "roll"]:before{
+    content: "" !important;
+}
+.sheet-wp-hitroll button[type = "roll"]:hover{
+    color:#b14623;
+}
+.sheet-wp-hitroll .sheet-statlabel button[type = "roll"] {
+    font-weight:bold;
+}
+.sheet-wp-hitroll .sheet-statlabel button[type = "roll"]:hover {
+    color:#602749;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

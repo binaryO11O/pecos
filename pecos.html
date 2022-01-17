@@ -78,23 +78,56 @@
         <div class="sheet-strscr_grid"><input type="text" name="attr_character_strength" value="5"/><span name="attr_character_strength_desc" style="font-weight: normal;"></div>
         <div class="sheet-strmod_grid">Damage: <span name="attr_character_strmod"/><input type="hidden" name="attr_character_strmod" value="0"/></div>
 
-        <div class="sheet-hth_grid">Base HTH: <span name="attr_character_hth"></span></div>     
-        <div class="sheet-tohit_grid">To Hit: <span name="attr_character_tohit"></span></div>
+        <div class="sheet-hth_grid">Base HTH: <span name="attr_character_hth_max"></span></div>     
+        <div class="sheet-tohit_grid">To Hit: <span name="attr_character_tohit_txt"></span></div>
 
         <div class="sheet-lps_grid">LPs: <span name="attr_character_lp"></span>/<span name="attr_character_lp_max"></span></div>
             
         <div class="sheet-cnd_grid"><input type="text" name="attr_character_cond" value="Fit"/></div>
 
-        <div class="sheet-wp0_grid"><span name="attr_wp0_name"></span></div>
-        <div class="sheet-wp1_grid"><span name="attr_wp1_name"></span></div>
-        <div class="sheet-wp2_grid"><span name="attr_wp2_name"></span></div>
-        <div class="sheet-wp3_grid"><span name="attr_wp3_name"></span></div>
+        <div class="sheet-wp0_grid sheet-wp sheet-wp_ctl_grid">
+            <div class="sheet-wp-hitroll">
+                <button type='roll' value='/em fires their @{wp0_name} rolling [[1d20 + @{character_tohit}]] to hit'>
+                    <span name="attr_wp0_name"></span>
+                </button>
+            </div>
+            <div>
+                <button type='roll' value='/roll 1d8'/>
+            </div>
+        </div>
+        <div class="sheet-wp sheet-wp1_grid sheet-wp_ctl_grid">
+            <div class="sheet-wp-hitroll">
+                <button type='roll' value='/em fires their @{wp1_name} rolling [[1d20 + @{character_tohit}]] to hit'>
+                    <span name="attr_wp1_name"></span>
+                </button>
+            </div>
+            <div>
+                <button type='roll' value='/roll 1d8'/>
+            </div>
+        </div>
+        <div class="sheet-wp sheet-wp2_grid">
+            <div class="sheet-wp-hitroll">
+                <button type='roll' value='/em fires their @{wp2_name} rolling [[1d20 + @{character_tohit}]] to hit'>
+                    <span name="attr_wp2_name"></span>
+                </button>
+            </div>
+        </div>
+        <div class="sheet-wp sheet-wp3_grid">
+            <div class="sheet-wp-hitroll">
+                <button type='roll' value='/em fires their @{wp3_name} rolling [[1d20 + @{character_tohit}]] to hit'>
+                    <span name="attr_wp3_name"></span>
+                </button>
+            </div>
+        </div>
+        
         <div class="sheet-wp4_grid"><span name="attr_wp4_name"></span></div>
         <div class="sheet-wp5_grid"><span name="attr_wp5_name"></span></div>
         <div class="sheet-wp6_grid"><span name="attr_wp6_name"></span></div>
         
     </div>
     <input type="hidden" name="attr_character_lp" value="-1">
+    <input type="hidden" name="attr_character_hth" value="-1">
+    <input type="hidden" name="character_tohit" value="0">
 </div>
 
 <div class="sheet-weapons">
@@ -285,7 +318,11 @@
                             setAttrs({character_agimod:"nil"}, {silent: true});
                             break;
                     }
-                    setAttrs({character_hth:basehth});
+                    setAttrs({character_hth_max:basehth});
+                    getAttrs(["character_hth"], function(v) {
+                        if (v["character_hth"] == "-1")
+                            setAttrs({character_hth:basehth}, {silent: true});
+                    });
                 }
                 else if (traitAttrs[i]=="character_awareness") {
                     if (tval < 7)
@@ -325,7 +362,8 @@
 
                     }
                     setAttrs({character_coomod:basetoh}, {silent: true});
-                    setAttrs({character_tohit:basetoh});
+                    setAttrs({character_tohit_txt:basetoh});
+                    setAttrs({character_tohit:parseInt(basetoh) || 0});
                 }
                 else if (traitAttrs[i]=="character_luck") {
                     if (tval < 7)
